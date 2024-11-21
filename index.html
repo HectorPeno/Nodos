@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menú del Día</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Menú del Día</h2>
+
+    <!-- Primer Plato -->
+<div class="menu-option">
+    <label for="primerPlato">Elige primer plato:</label>
+    <select id="primerPlato" onchange="mostrarImagen('primerPlato', 'imagen1')">
+      <option value="">(Elige primer plato)</option>
+      <option value="10">Lentejas con chorizo (10€)</option>
+      <option value="12">Consomé alubias (12€)</option>
+    </select>
+    <img id="imagen1" alt="Primer Plato" class="plato-img">
+  </div>
+  
+  <!-- Segundo Plato -->
+  <div class="menu-option">
+    <label for="segundoPlato">Elige segundo plato:</label>
+    <select id="segundoPlato" onchange="mostrarImagen('segundoPlato', 'imagen2')">
+      <option value="">(Elige segundo plato)</option>
+      <option value="15">Paella (15€)</option>
+      <option value="13">Calamares (13€)</option>
+    </select>
+    <img id="imagen2" alt="Segundo Plato" class="plato-img">
+  </div>
+  
+  <!-- Postre -->
+  <div class="menu-option">
+    <label for="postre">Elige postre:</label>
+    <select id="postre" onchange="mostrarImagen('postre', 'imagen3')">
+      <option value="">(Elige postre)</option>
+      <option value="5">Tarta de queso (5€)</option>
+      <option value="4">Fruta variada (4€)</option>
+    </select>
+    <img id="imagen3" alt="Postre" class="plato-img">
+  </div>
+  
+  <!-- Descuento y Botón de Calcular -->
+  <div class="descuento-calc">
+    <label><input type="checkbox" id="descuento"> Aplicar descuento</label>
+    <button onclick="calcularTotal()">Calcular total</button>
+  </div>
+  
+  <!-- Resultado del Total -->
+  <p id="total">Total: </p>
+
+
+</body>
+</html>
